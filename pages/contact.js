@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import React, { useState } from "react";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  const [formValue, setFormValue] = useState('');
-  
+  const [formValue, setFormValue] = useState("");
+
   const handleChange = (e) => {
-    setFormValue(e.target.value)
-  }
+    setFormValue(e.target.value);
+  };
 
   const handleSubmit = (e) => {
-    if(formValue) setSubmitted(true);
-  }
+    if (formValue) setSubmitted(true);
+  };
 
   return (
     <div className={styles.container}>
@@ -22,24 +22,29 @@ export default function Contact() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-         Contact Us
-        </h1>
+        <h1 className={styles.title}>Contact Us</h1>
 
-        <a href='/'>Back</a>
+        <a href="/">Back</a>
 
         <section>
           <label>
             Name:
-            <input type="text" id="formInput" value={formValue} onChange={handleChange} />
+            <input
+              type="text"
+              id="formInput"
+              value={formValue}
+              onChange={handleChange}
+            />
           </label>
-          <input type="submit" id="formSubmit" value="More Info Please" onClick={handleSubmit} />
-          { submitted && <p id="formMessage">More info coming to {formValue}</p>}
+          <input
+            type="submit"
+            id="formSubmit"
+            value="More Info Please"
+            onClick={handleSubmit}
+          />
+          {submitted && <p id="formMessage">More info coming to {formValue}</p>}
         </section>
-       
-
       </main>
-
 
       <style jsx>{`
         main {
@@ -92,5 +97,5 @@ export default function Contact() {
         }
       `}</style>
     </div>
-  )
+  );
 }

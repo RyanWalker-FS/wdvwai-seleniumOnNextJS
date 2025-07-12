@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -11,13 +11,14 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-         WDV4416
-         <span>Testing With Selenium</span>
+          WDV4416
+          <span>Testing With Selenium</span>
         </h1>
 
-        <a href='/contact' id="contactLink">Contact Us</a>
+        <a href="/contact" id="contactLink">
+          Contact Us
+        </a>
       </main>
-
 
       <style jsx>{`
         main {
@@ -70,5 +71,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
